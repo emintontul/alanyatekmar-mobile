@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "107027965581",
+    "project_id": "kingdomsc-52ade",
+    "storage_bucket": "kingdomsc-52ade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107027965581:android:8b5b98abbacf41e74864c4",
+        "android_client_info": {
+          "package_name": "com.lime.kingdom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107027965581-lkugjrcnggk8f2vu8oquonaqse2a9rj3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lime.kingdom",
+            "certificate_hash": "6cd84ad5f426b0e5bbd2aaa10a091250698e6876"
+          }
+        },
+        {
+          "client_id": "107027965581-mg82g82jbrk7mpoghi6fdcb79cme535s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmh_AzcjZ0COqxUPesO7POgJLcO7tbu5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107027965581-mg82g82jbrk7mpoghi6fdcb79cme535s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
