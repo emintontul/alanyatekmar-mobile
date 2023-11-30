@@ -10,7 +10,7 @@ const Screens: Array<IScreen<PhotoStackNavigationProps>> = [
     name: routes.PHOTO_LIST,
     component: PhotoList,
     headerShown: true,
-  }
+  },
 ];
 
 export default Screens;

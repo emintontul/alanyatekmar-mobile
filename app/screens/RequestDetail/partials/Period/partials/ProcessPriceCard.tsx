@@ -21,7 +21,7 @@ export const ProcessPriceCard = ({pending}: {pending: boolean}) => {
         <AppImage url={images.figo} width={24} height={24} />
         <Block ml-8 flex>
           <Block row mb-8>
-            <Text semibold>kingdom </Text>
+            <Text semibold>tekmar </Text>
             <Text semibold>request_detail.processing_fee</Text>
           </Block>
           <RenderWhen>

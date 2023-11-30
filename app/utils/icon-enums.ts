@@ -47,6 +47,4 @@ export enum ICONS {
   person = 'person',
   homeFilled = 'home_filled',
   fitnessCenter = 'fitness_center',
-  
-
 }

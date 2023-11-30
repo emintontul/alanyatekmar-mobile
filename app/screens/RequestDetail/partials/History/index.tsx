@@ -5,7 +5,7 @@ import {groupBy} from 'lodash';
 import moment from 'moment';
 import {useTranslation} from 'react-i18next';
 
-import {useGetLogsQuery} from '@/api/kingdomApi';
+import {useGetLogsQuery} from '@/api/tekmarApi';
 import {AppFlatList, Block, Text} from '@/components';
 import {useStyledTag} from '@/hooks';
 import {COLORS} from '@/theme';

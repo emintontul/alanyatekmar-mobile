@@ -7,7 +7,7 @@ import { baseURL } from '@/api/config';
 import moment from 'moment';
 import { RootState } from '@/store';
 import { useSelector } from 'react-redux';
-import { KingdomLogo, images } from '@/assets';
+import { TekmarLogo, images } from '@/assets';
 import { ICONS, heightPixel, rgba } from '@/utils';
 import { ActivityIndicator, Animated, Button, Image, Pressable, RefreshControl, StyleSheet, View } from 'react-native';
 import { useStyledTag } from '@/hooks';

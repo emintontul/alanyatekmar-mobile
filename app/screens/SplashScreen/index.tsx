@@ -1,12 +1,11 @@
 import React, {memo, useEffect} from 'react';
 import {Button, Linking} from 'react-native';
 
-import {utils} from '@react-native-firebase/app';
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {images, KingdomLogo} from '@/assets';
+import {images, TekmarLogo} from '@/assets';
 import {AppButton, AppImage, AppImageBackground, Block, Text} from '@/components';
 import {useAppSelector} from '@/hooks';
 import {MainStackNavigationPropsType} from '@/navigation/stacks/MainStack/types';
@@ -23,7 +22,6 @@ const SplashScreen = () => {
       // First, you would need to get the initial URL from your third-party integration
       // The exact usage depend on the third-party SDK you use
       // For example, to get the initial URL for Firebase Dynamic Links:
-      const {isAvailable} = utils().playServicesAvailability;
 
       // As a fallback, you may want to do the default deep link handling
       const url = await Linking.getInitialURL();
@@ -87,7 +85,7 @@ const SplashScreen = () => {
     <AppImageBackground source={images.background}>
       <SafeAreaView height={'100%'}>
         <Block flex center style={{paddingTop: 100, height: '100%'}}>
-          <AppImage url={KingdomLogo.dark} width={200} height={53} />
+          <AppImage url={TekmarLogo.dark} width={200} height={53} />
           <Text mt-40 style={{color: '#000', fontWeight: '400', fontSize: 20}}>
             common.welcome
           </Text>

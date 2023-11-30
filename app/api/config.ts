@@ -1,6 +1,6 @@
 import {AxiosRequestConfig} from 'axios';
 
-export const baseURL = 'https://panel.kingdomsportclub.com/api';
+export const baseURL = 'https://api.alanyatekmar.com/api/';
 export const Crypto = false;
 
 const multiForm: AxiosRequestConfig = {

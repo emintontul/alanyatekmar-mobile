@@ -9,14 +9,14 @@ import * as requestRedux from './reducers/request';
 import * as settingsRedux from './reducers/settings';
 
 import {baseApi, rtkQueryErrorHandler, rtkQueryLoaderHandler} from '@/api';
-import {kingdomApi} from '@/api/kingdomApi';
+import {tekmarApi} from '@/api/tekmarApi';
 
 export {authRedux, settingsRedux, requestRedux};
 
 const rootPersistConfig = {
   key: 'root',
   version: 1,
-  blacklist: [baseApi.reducerPath, kingdomApi.reducerPath],
+  blacklist: [baseApi.reducerPath, tekmarApi.reducerPath],
   storage: EncryptedStorage,
 };
 
@@ -31,7 +31,7 @@ export const rootReducer = combineReducers({
   auth: authRedux.default,
   requestRedux: requestRedux.default,
   settings: persistReducer(settingsPersistConfig, settingsRedux.default),
-  [kingdomApi.reducerPath]: kingdomApi.reducer,
+  [tekmarApi.reducerPath]: tekmarApi.reducer,
   [baseApi.reducerPath]: baseApi.reducer,
 });
 

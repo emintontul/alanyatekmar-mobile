@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import {LoginUserResponseModel} from '@/api/kingdomApi';
+import {LoginUserResponseModel} from '@/api/tekmarApi';
 
 export interface IAuthState {
   user?: LoginUserResponseModel;

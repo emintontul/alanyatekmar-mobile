@@ -1,4 +1,4 @@
-export const KingdomLogo = {
+export const TekmarLogo = {
   light: require('./logo.png'),
   dark: require('./logo.png'),
 };

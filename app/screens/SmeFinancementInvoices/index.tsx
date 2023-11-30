@@ -7,7 +7,7 @@ import IntroModal, {IntroModalMethods} from './partials/IntroModal';
 import LimitDistributionsScrollView from './partials/LimitDistributionsScrollView';
 import RequestInvoiceSelectList from './partials/RequestInvoiceSelectList';
 
-import {GetAllowancesCompaniesApiArg, GetInvoicesApiArg, useGetAllowancesCompaniesQuery, useGetInvoicesQuery} from '@/api/kingdomApi';
+import {GetAllowancesCompaniesApiArg, GetInvoicesApiArg, useGetAllowancesCompaniesQuery, useGetInvoicesQuery} from '@/api/tekmarApi';
 import {AppButton, AppCard, AppFlatList, AppIcon, AppScreen, Block, CardTypes, FilterActions, SegmentView} from '@/components';
 import BadgeFilter from '@/components/App/BadgeFilter';
 import {useAppSelector} from '@/hooks';

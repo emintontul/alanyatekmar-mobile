@@ -3,7 +3,7 @@ import {ActivityIndicator, ScrollView, StyleSheet} from 'react-native';
 
 import {pickBy} from 'lodash';
 
-import {AllowanceRequestModel, usePostAllowancesMutation} from '@/api/kingdomApi';
+import {AllowanceRequestModel, usePostAllowancesMutation} from '@/api/tekmarApi';
 import {AppCard, AppFlatList, Block, CardTypes, Text} from '@/components';
 import {useAppSelector, useStyledTag} from '@/hooks';
 import {PeriodCard} from '@/screens/DashboardRequestDetail/partials';

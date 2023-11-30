@@ -1,8 +1,8 @@
 import routes from '../../Routes';
 import {IScreen} from '../Models/IScreen';
 import UserList from '@/screens/Admin/UserList';
-import { AdminStackNavigationProps } from './types';
-import { ExerciseList } from '@/screens';
+import {AdminStackNavigationProps} from './types';
+import {ExerciseList} from '@/screens';
 import UserPhotoList from '@/screens/Admin/UserPhotoList';
 import AddUserPhoto from '@/screens/Admin/AddUserPhoto';
 import UserSurvey from '@/screens/Admin/UserSurvey';
@@ -41,7 +41,7 @@ const Screens: Array<IScreen<AdminStackNavigationProps>> = [
     name: routes.ADMIN_USER_INFORMATIONS,
     component: UserInformations,
     headerShown: true,
-  }
+  },
 ];
 
 export default Screens;

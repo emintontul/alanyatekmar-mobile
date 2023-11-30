@@ -1,7 +1,6 @@
 import React, {memo} from 'react';
 import {Dimensions, Linking, Platform} from 'react-native';
 
-import MultipleImagePicker from '@baronha/react-native-multiple-image-picker';
 import {fetch} from '@react-native-community/netinfo';
 import {Buffer} from 'buffer';
 import * as md5Encrypt from 'md5';
@@ -211,13 +210,6 @@ const resizeImageMultiple = async (response: Array<ImageType>): Promise<Array<Im
   return resizedImages;
 };
 
-const launchMultipleImages = async () => {
-  await Permission.checkPermission(PERMISSION_TYPE.photo);
-  const response = await MultipleImagePicker.openPicker({});
-  const customImages = response.map(image => ({width: image.width, height: image.height, filename: image.fileName, path: image.path, type: image.type} as ImageType));
-  const resizedImagesArr = await resizeImageMultiple(customImages);
-  return resizedImagesArr;
-};
 
 const launchSingleImage = async (): Promise<ImagePickerResultType> => {
   return new Promise(resolve => {
@@ -306,7 +298,6 @@ export {
   openEmail,
   resizeImageSingle,
   resizeImageMultiple,
-  launchMultipleImages,
   launchSingleImage,
   createLocalNotification,
   cancelLocalNotification,

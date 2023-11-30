@@ -12,8 +12,8 @@ import Toast from 'react-native-toast-message';
 import useLoginForm from './useForm';
 
 import {baseURL} from '@/api/config';
-import {LoginRequestModel, usePostSessionsMutation} from '@/api/kingdomApi';
-import {images, KingdomLogo} from '@/assets';
+import {LoginRequestModel, usePostSessionsMutation} from '@/api/tekmarApi';
+import {images, TekmarLogo} from '@/assets';
 import {AppButton, AppImage, AppImageBackground, AppInput, AppScreen, Block, Text} from '@/components';
 import {useAppDispatch, useStyledTag} from '@/hooks';
 import {AuthStackNavigationPropsType} from '@/navigation/stacks/AuthStack/types';
@@ -52,41 +52,36 @@ const LoginScreen = () => {
 
     const formValues = form.getValues();
     const request = axios
-      .post(baseURL + '/auth/local?populate=*', {
-        identifier: formValues.userName,
+      .post(baseURL + 'User/Login', {
+        email: formValues.userName,
         password: formValues.password,
       })
       .then(response => {
         const data = response?.data;
-        const token = data?.jwt;
-        const _user = data?.user;
-        axios
-          .get(baseURL + '/users/me?populate=*', {
-            headers: {
-              Authorization: 'Bearer ' + data?.jwt,
-              'Cache-Control': 'no-cache',
-            },
-          })
-          .then(response => {
-            console.log('%cindex.tsx line:76 data', 'color: #007acc;', response?.data);
-            const user = response?.data;
-            dispatch(authRedux.login({token, user}));
-            console.log('%cindex.tsx line:80 _user?.role', 'color: #007acc;', user);
-            if (user?.role?.type === 'admin') {
-              console.log('admin');
-              rootNavigation.replace('ADMIN_TABS_ROOT', {
-                screen: 'HOME_MAIN',
-              });
-            } else {
-              console.log('user');
-              rootNavigation.replace('MAIN_TABS_ROOT', {
-                screen: 'HOME_MAIN',
-              });
-            }
-            setLoading(false);
+        const token = data?.data?.access_token;
+        const _user = data?.data?.access_token;
+
+
+        console.log('%cindex.tsx line:76 data', 'color: #007acc;', response?.data);
+        const user = response?.data;
+        dispatch(authRedux.login({token, user}));
+        console.log('%cindex.tsx line:80 _user?.role', 'color: #007acc;', user);
+        if (user?.role?.type === 'admin') {
+          console.log('admin');
+          rootNavigation.replace('ADMIN_TABS_ROOT', {
+            screen: 'HOME_MAIN',
           });
+        } else {
+          console.log('user');
+          rootNavigation.replace('MAIN_TABS_ROOT', {
+            screen: 'HOME_MAIN',
+          });
+        }
+        setLoading(false);
+        
       })
       .catch(error => {
+        console.log('%cindex.tsx line:90 error', 'color: #007acc;', error);
         setLoading(false);
         Toast.show({
           text1: t('auth.error'),
@@ -105,7 +100,7 @@ const LoginScreen = () => {
       <AppImageBackground source={images.backgroundSoft}>
         <AppScreen safe bg-transparent>
           <Block center pt-70 pb-30>
-            <AppImage url={KingdomLogo.dark} width={200} height={53} />
+            <AppImage url={TekmarLogo.dark} width={200} height={53} />
           </Block>
           <FormContainer>
             <Controller

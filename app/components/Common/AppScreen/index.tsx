@@ -11,7 +11,7 @@ import {Header} from '../../../navigation/components/DefaultHeader';
 import {IStyleShortcuts} from '../../../utils/infrastructure/interfaces';
 import {getStyleShortcuts} from '../../../utils/style-shortcuts';
 
-import {AppLoader, Block, Text} from '@/components';
+import {Block, Text} from '@/components';
 import {useTheme} from '@/hooks';
 import {bottomTabHeight, COLORS, window} from '@/theme';
 import {heightPixel, UseThemeType} from '@/utils';
@@ -45,7 +45,6 @@ function AppScreen(props: Props) {
 
   return (
     <>
-      <AppLoader loading={loading || false} />
       <Header navigationOptions={navigationOptions} navigation={navigation} barStyle={barStyle} />
       <>
         {scroll && safe && !keyboardScroll && (

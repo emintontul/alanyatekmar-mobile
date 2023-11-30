@@ -28,7 +28,7 @@ export const DashboardBottomSheet = ({bottomHeight}: DashboardBottomSheetProps) 
           <Block key={index} mt-20>
             <AppImage rounded-7 url={images.blogImage} width={'100%'} height={heightPixel(148)} />
             <Text mt-15 mb-10 default semibold>
-              kingdom yanınızda
+              tekmar yanınızda
             </Text>
             <Text tiny>Anlaşmalı olduğumuz kurumlara kestiğiniz faturaları anında tahsil edebilmek için Tedarikçi Finansmanı`nı deneyin.</Text>
             <Block mt-10 pressable>

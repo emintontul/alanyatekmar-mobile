@@ -1,4 +1,4 @@
-import { AdminBottomTabNavigation } from '@/navigation/admin-bottom-tab/BottomTabNavigation';
+import {AdminBottomTabNavigation} from '@/navigation/admin-bottom-tab/BottomTabNavigation';
 import {BottomTabNavigation} from '../../bottom-tab/BottomTabNavigation';
 import Routes from '../../Routes';
 import AuthStack from '../AuthStack';

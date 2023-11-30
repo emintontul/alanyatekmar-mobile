@@ -4,7 +4,7 @@ import {ScrollView} from 'react-native';
 import {LimitDistributionCards} from 'data/mock_data';
 import {useDispatch} from 'react-redux';
 
-import {GetAllowancesCompaniesApiArg, useGetAllowancesCompaniesQuery} from '@/api/kingdomApi';
+import {GetAllowancesCompaniesApiArg, useGetAllowancesCompaniesQuery} from '@/api/tekmarApi';
 import {BankLimitCard, Block, InfoCard, Text} from '@/components';
 import {useAppSelector, useStyledTag} from '@/hooks';
 import {requestRedux} from '@/store';

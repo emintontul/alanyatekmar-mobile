@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 import {useTranslation} from 'react-i18next';
 
-import {useGetAllowancesByAllowanceIdInvoicesQuery} from '@/api/kingdomApi';
+import {useGetAllowancesByAllowanceIdInvoicesQuery} from '@/api/tekmarApi';
 import {AppCard, AppFlatList, Block, CardTypes, Text} from '@/components';
 import {useStyledTag} from '@/hooks';
 import {COLORS} from '@/theme';

@@ -4,7 +4,7 @@ import {Controller} from 'react-hook-form';
 
 import useRegisterForm from './useForm';
 
-import {KingdomLogo, images} from '@/assets';
+import {TekmarLogo, images} from '@/assets';
 import {AppButton, AppImage, AppImageBackground, AppInput, AppScreen, Block, Text} from '@/components';
 import {useStyledTag} from '@/hooks';
 import {IRegisterData} from '@/utils';
@@ -17,7 +17,7 @@ const RegisterScreen = () => {
   };
 
   const navigationOptions = {
-    headerTitle: () => <AppImage url={KingdomLogo.light} width={100} height={20} />,
+    headerTitle: () => <AppImage url={TekmarLogo.light} width={100} height={20} />,
     headerTransparent: false,
   };
 

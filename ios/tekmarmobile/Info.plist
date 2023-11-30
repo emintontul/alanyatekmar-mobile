@@ -26,16 +26,16 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>kingdomsc</string>
+			<string>alanyatekmar</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>kingdomsc</string>
+				<string>alanyatekmar</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>kingdomsportclub.com</string>
+				<string>tekmarsportclub.com</string>
 			</array>
 		</dict>
 	</array>
@@ -57,13 +57,13 @@
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>Our app uses bluetooth to find, connect and transfer data between different devices</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Kingdom Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
+	<string>Tekmar Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Kingdom Sport Club uygulaması lokasyon bilgilerinize ihtiyaç duymaktadır. Lütfen gerekli izinleri veriniz.</string>
+	<string>Tekmar Sport Club uygulaması lokasyon bilgilerinize ihtiyaç duymaktadır. Lütfen gerekli izinleri veriniz.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Kingdom Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
+	<string>Tekmar Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Kingdom Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
+	<string>Tekmar Sport Club uygulamasının fotoğraf çekimi veya resim seçebilmesi için kameranıza erişmesi gerekir. Lütfen gerekli izinleri veriniz.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>TT-Norms-Pro-Black.ttf</string>

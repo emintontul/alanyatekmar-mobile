@@ -10,7 +10,7 @@ import Toast from 'react-native-toast-message';
 import * as yup from 'yup';
 
 import {baseURL} from '@/api/config';
-import {images, KingdomLogo} from '@/assets';
+import {images, TekmarLogo} from '@/assets';
 import {AppButton, AppImage, AppImageBackground, AppInput, AppScreen, Block} from '@/components';
 import {useAppDispatch, useStyledTag} from '@/hooks';
 import {MainStackNavigationPropsType} from '@/navigation/stacks/MainStack/types';
@@ -71,7 +71,7 @@ const ResetPassword = params => {
       <AppImageBackground source={images.backgroundSoft}>
         <AppScreen safe bg-transparent navigationOptions={navigationOptions}>
           <Block center pt-70 pb-30>
-            <AppImage url={KingdomLogo.dark} width={200} height={53} />
+            <AppImage url={TekmarLogo.dark} width={200} height={53} />
           </Block>
           <FormContainer>
             <Controller

@@ -10,7 +10,7 @@ import {IScreen} from '../stacks/Models/IScreen';
 import ProfiletStack from '../stacks/ProfileStack';
 import {Keyof} from '@/utils';
 import AnnouncementStack from '../stacks/AnnouncementStack';
-import { BottomStackNavigationProps } from '../bottom-tab/BottomTabItems';
+import {BottomStackNavigationProps} from '../bottom-tab/BottomTabItems';
 import AdminStack from '../stacks/AdminStack';
 import AdminNotificationStack from '../stacks/AdminNotificationStack';
 

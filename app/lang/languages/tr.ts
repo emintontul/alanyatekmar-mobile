@@ -105,7 +105,7 @@ const tr = {
     financing_incentive_modal_desc:
       'Hiçbir kurumun bildirimini beklemeden vadesi gelmemiş e-Faturalarınızın ödemesini de anında alabilirsiniz. Bunun için e-Fatura entegratörünüzü ve belgelerinizi, masaüstü bilgisayarınızdan hesabınıza giriş yaparak güncelleyin. Sorularınız için: 0212 065 04 09',
     connection_error_message:
-      'e-Fatura entegratörünüzle bağlantınız koptu. kingdom’nın ayrıcalıklarından faydalanmaya devam etmek için masaüstü bilgisayarınızdan hesabınıza giriş yaparak bilgilerinizi girin.',
+      'e-Fatura entegratörünüzle bağlantınız koptu. tekmar’nın ayrıcalıklarından faydalanmaya devam etmek için masaüstü bilgisayarınızdan hesabınıza giriş yaparak bilgilerinizi girin.',
     document_error_title: 'Faturalarınızı nakde çevirmeye hazırlanıyoruz',
     document_error_text: 'Size uygun olan ürünümüze göre, limitiniz vasıtasıyla veya alıcıdan temin edilen faturalarınızla başlayabileceksiniz.',
     fast_select_day_title: 'Vade Gününü Hızlıca Atayın',
@@ -136,8 +136,8 @@ const tr = {
     e_invoice_connect_message: 'e-Fatura Entegratörünüzü Bağlayın',
     e_invoice_connect_message_v2: 'e-Fatura entegratörünüzle bağlantınız koptu. Ayrıcalıklarımızdan faydalanabilmek için bilgilerinizi girin.',
     complete_documents: 'Size özel ürünlerimizden faydalanabilmek için belgelerinizi tamamlayın.',
-    complete_documents_v2: 'kingdom`yı kullanabilmek için iletmeniz gereken 3 belge bulunuyor.',
-    complete_documents_v3: 'kingdom yı kullanabilmek için iletmeniz gereken 4 belge bulunuyor.',
+    complete_documents_v2: 'tekmar`yı kullanabilmek için iletmeniz gereken 3 belge bulunuyor.',
+    complete_documents_v3: 'tekmar yı kullanabilmek için iletmeniz gereken 4 belge bulunuyor.',
   },
   bottom_tab: {
     homepage: 'Ana Sayfa',
@@ -158,7 +158,7 @@ const tr = {
     exercise_list: 'Egzersiz Listesi',
     exercise_detail_title: 'Egzersiz Detayı',
     exercise_detail_subtitle: 'Egzersizlerinizi buradan takip edebilirsiniz.',
-    finish_exercise: 'Antrenmanı Tamamla'
+    finish_exercise: 'Antrenmanı Tamamla',
   },
   sme: {
     intro_modal_title: 'Neden bütün faturalarımı göremiyorum?',
@@ -260,7 +260,7 @@ const tr = {
     offer_process_subtitle: 'İskonto talebiniz için finansal kuruluşlardan teklif alıyoruz.  Her teklifi size e-postayla ileteceğiz.',
     financing_phase: 'Finansman Aşaması',
     processing_fee: 'İşlem Ücreti',
-    transaction_fee_waiting_phase: 'Size özel tekliflerden biriyle devam edebilmeniz için tekliflerle beraber kingdom İşlem Ücreti de iletilir.',
+    transaction_fee_waiting_phase: 'Size özel tekliflerden biriyle devam edebilmeniz için tekliflerle beraber tekmar İşlem Ücreti de iletilir.',
     fee_for_you: 'Size Özel İşlem Ücreti',
     pay: 'Ödeme Yap',
     payment_receipt_date: 'Ödeme Alma Tar.',
@@ -302,12 +302,12 @@ const tr = {
   payment: {
     payment: 'Ödeme Yap',
     title: 'İşlem Ücreti Ödemesi',
-    subtitle: 'Teklif sürecine devam edebilmek için kingdom İşlem Ücreti’ni ödemeniz gerekli.',
+    subtitle: 'Teklif sürecine devam edebilmek için tekmar İşlem Ücreti’ni ödemeniz gerekli.',
     card_info: 'Kart Bilgileri',
     add_new_card: 'Yeni Kart Ekle',
     saved_cards: 'Kayıtlı Kartlarım',
     info_text:
-      'Kredi/banka kartı üzerinden yapılacak tahsilat işlemi; kingdom adına 6493 no’lu kanun çerçevesinde işlemi yapmak üzere BDDK tarafından lisanslandırılmış ödeme kuruluşu tarafından gerçekleştirilecektir.',
+      'Kredi/banka kartı üzerinden yapılacak tahsilat işlemi; tekmar adına 6493 no’lu kanun çerçevesinde işlemi yapmak üzere BDDK tarafından lisanslandırılmış ödeme kuruluşu tarafından gerçekleştirilecektir.',
     card_name: 'Kart Üzerindeki İsim',
     card_name_placeholder: 'Kart Sahibinin Adı ve Soyadı',
     card_no: 'Kart Numarası',

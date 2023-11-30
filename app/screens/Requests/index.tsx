@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {Active, Paidup, RejectAndCancel} from './partials';
 
-import {GetAllowancesSenderApiArg, useGetAllowancesSenderQuery} from '@/api/kingdomApi';
+import {GetAllowancesSenderApiArg, useGetAllowancesSenderQuery} from '@/api/tekmarApi';
 import {AppIcon, AppScreen, Block, SegmentView} from '@/components';
 import {useAppSelector, useStyledTag} from '@/hooks';
 import {COLORS} from '@/theme';

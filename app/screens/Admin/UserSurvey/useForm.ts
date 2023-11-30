@@ -2,7 +2,6 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {useForm} from 'react-hook-form';
 import * as yup from 'yup';
 
-
 const useSurveyForm = () => {
   const surveySchema = yup.object({
     Age: yup.string().required('Age is required'),

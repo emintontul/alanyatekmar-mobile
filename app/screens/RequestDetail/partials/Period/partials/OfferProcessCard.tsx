@@ -8,7 +8,7 @@ import {ProcessPriceCard} from './ProcessPriceCard';
 import {getDynamicTitleStyle} from '..';
 
 import {baseURL} from '@/api/config';
-import {useGetAllowancesByAllowanceIdFinancersQuery} from '@/api/kingdomApi';
+import {useGetAllowancesByAllowanceIdFinancersQuery} from '@/api/tekmarApi';
 import { AppFlatList, Block, InfoCard, Text} from '@/components';
 import {useAppSelector, useStyledTag} from '@/hooks';
 import {COLORS} from '@/theme';

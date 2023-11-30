@@ -9,7 +9,7 @@ import {MarkedDates} from 'react-native-calendars/src/types';
 import BottomModal from '../BottomModal';
 import FastSelectDay, {BadgeItemProps, DayBadgeData} from '../FastSelectDay';
 
-import {useGetOfficialHolidaysQuery} from '@/api/kingdomApi';
+import {useGetOfficialHolidaysQuery} from '@/api/tekmarApi';
 import {AppCalendar, AppIcon, AppInput, Block, Text} from '@/components';
 import {AppCalendarMethods} from '@/components/Common/AppCalendar';
 import {useDialog} from '@/hooks';

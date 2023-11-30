@@ -10,8 +10,6 @@ import AppImageBackground from './AppImageBackground';
 import AppInput from './AppInput';
 import AppInputDatePicker from './AppInputDatePicker';
 import AppInputSelector from './AppInputSelector';
-import AppLoader from './AppLoader';
-import AppLottieView from './AppLottieView';
 import AppModal from './AppModal';
 import AppScreen from './AppScreen';
 import AppSelector from './AppSelector';
@@ -45,8 +43,6 @@ export {
   AppImage,
   AppImageBackground,
   AppInput,
-  AppLoader,
-  AppLottieView,
   AppModal,
   AppScreen,
   AppSelector,

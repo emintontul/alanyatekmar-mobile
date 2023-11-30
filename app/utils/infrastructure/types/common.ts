@@ -51,8 +51,8 @@ export type KeyofList<Values> = {
       ? KeyofList<Values[K][number]>[] | string | string[]
       : string | string[]
     : Values[K] extends object
-    ? KeyofList<Values[K]>
-    : string;
+      ? KeyofList<Values[K]>
+      : string;
 };
 export type NavigationScreenListenerEvent = {
   data: {

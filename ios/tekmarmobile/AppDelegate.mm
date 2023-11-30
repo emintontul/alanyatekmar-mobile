@@ -3,8 +3,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-#import <React/RCTAppSetupUtils.h>
-#import <Firebase.h>
+#import <RCTAppSetupUtils.h>
 #import <React/RCTLinkingManager.h>
 #if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
@@ -61,8 +60,7 @@ static void ClearKeychainIfNecessary() {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [FIRApp configure];
-  RCTAppSetupPrepareApp(application);
+  RCTAppSetupPrepareApp(application, true);
 
   ClearKeychainIfNecessary();
 
@@ -77,8 +75,7 @@ static void ClearKeychainIfNecessary() {
 #endif
 
   NSDictionary *initProps = [self prepareInitialProps];
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"tekmarmobile", initProps);
-
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"tekmarmobile", initProps, true);
   if (@available(iOS 13.0, *)) {
     rootView.backgroundColor = [UIColor systemBackgroundColor];
   } else {

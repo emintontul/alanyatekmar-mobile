@@ -230,7 +230,7 @@ const injectedRtkApi = api.injectEndpoints({
   }),
   overrideExisting: false,
 });
-export {injectedRtkApi as kingdomApi};
+export {injectedRtkApi as tekmarApi};
 export type GetAddressesSearchApiResponse = unknown;
 export type GetAddressesSearchApiArg = string;
 export type PostAllowancesApiResponse = /** status 200 Success */ AllowanceCreateResponseModel;
