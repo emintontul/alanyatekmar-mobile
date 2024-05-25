@@ -1,11 +1,12 @@
 export {default as Photos} from './Photos';
-export {default as ExerciseDetail} from './ExerciseDetail';
+export {default as ReservationDetail} from './ReservationDetail';
 export {default as HowToDo} from './HowToDo';
 export {default as HomePage} from './HomePage';
 export {default as ConnectPrinter} from './ConnectPrinter';
 export {default as Invoices} from './Invoices';
 export {default as Profile} from './Profile';
 export {default as ExerciseList} from './ExerciseList';
+export {default as AddTourReservation} from './AddTourReservation';
 export {default as Requests} from './Requests';
 export {default as SplashScreen} from './SplashScreen';
 export {default as UpcomingPayments} from './UpcomingPayments';

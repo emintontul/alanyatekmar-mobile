@@ -538,7 +538,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = tekmarmobile/tekmarmobile.entitlements;
 				CURRENT_PROJECT_VERSION = 2100;
-				DEVELOPMENT_TEAM = 548XTXR6J7;
+				DEVELOPMENT_TEAM = 8J7V5VMQ32;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = tekmarmobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tekmar Sport Club";
@@ -553,7 +553,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lime.tekmar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lime.tekmarsdgsdg;
 				PRODUCT_NAME = tekmarmobile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -570,7 +570,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = tekmarmobile/tekmarmobile.entitlements;
 				CURRENT_PROJECT_VERSION = 2100;
-				DEVELOPMENT_TEAM = 548XTXR6J7;
+				DEVELOPMENT_TEAM = 8J7V5VMQ32;
 				INFOPLIST_FILE = tekmarmobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tekmar Sport Club";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
@@ -584,7 +584,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lime.tekmar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lime.tekmarsdgsdg;
 				PRODUCT_NAME = tekmarmobile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

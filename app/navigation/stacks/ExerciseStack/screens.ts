@@ -1,15 +1,15 @@
 import {ExerciseStackNavigationProps} from './types';
 import routes from '../../Routes';
 import {IScreen} from '../Models/IScreen';
-import ExerciseDetail from '@/screens/ExerciseDetail';
+import ReservationDetail from '@/screens/ReservationDetail';
 import HowToDo from '@/screens/HowToDo';
 import ExerciseList from '@/screens/ExerciseList';
 
 const Screens: Array<IScreen<ExerciseStackNavigationProps>> = [
   {
-    title: 'bottom_tab.exercise_detail',
-    name: routes.EXERCISE_DETAIL,
-    component: ExerciseDetail,
+    title: 'bottom_tab.reservation_detail',
+    name: routes.RESERVATION_DETAIL,
+    component: ReservationDetail,
     headerShown: true,
   },
   {

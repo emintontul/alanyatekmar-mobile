@@ -43,13 +43,6 @@ export const AdminBottomTabItemList: IScreen<BottomStackNavigationProps>[] = [
     headerShown: false,
   },
   {
-    label: 'bottom_tab.announcements',
-    icon: ICONS.insertDriveFile,
-    name: Routes.ANNOUNCEMENT_MAIN,
-    component: AnnouncementStack,
-    headerShown: false,
-  },
-  {
     label: 'bottom_tab.profile',
     icon: ICONS.person,
     name: Routes.PROFILE_MAIN,

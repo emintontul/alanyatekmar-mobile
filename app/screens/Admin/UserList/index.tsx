@@ -87,6 +87,14 @@ const UserList = () => {
 
         setMoreLoading(false);
       }, 500);
+    }).catch(error => {
+      //401
+      if (error.response.status == 401) {
+        navigation.navigate('LOGIN');
+      }
+      console.log('%cindex.tsx line:84 error', 'color: #007acc;', error.response);
+      setMoreLoading(false);
+      setIsListEnd(true);
     });
   }
 

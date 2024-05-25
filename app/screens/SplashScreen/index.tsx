@@ -15,7 +15,7 @@ const SplashScreen = () => {
   const {token, user} = useAppSelector(state => state.auth);
 
   const linking = {
-    prefixes: ['kingdomsc://', 'https://kingdomsportclub.com'],
+    prefixes: ['tekmar://', 'https://alanyatekmar.com'],
 
     // Custom function to get the URL which was used to open the app
     async getInitialURL() {

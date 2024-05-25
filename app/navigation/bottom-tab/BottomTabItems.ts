@@ -35,24 +35,10 @@ export const BottomTabItemList: IScreen<BottomStackNavigationProps>[] = [
     headerShown: false,
   },
   {
-    label: 'bottom_tab.exercises',
-    icon: ICONS.kettlebell,
+    label: 'bottom_tab.reservations',
+    icon: ICONS.Coins1,
     name: Routes.INVOICES_MAIN,
     component: InvoiceStack,
-    headerShown: false,
-  },
-  {
-    label: 'bottom_tab.photos',
-    icon: ICONS.collections,
-    name: Routes.PHOTOS_MAIN,
-    component: PhotoStack,
-    headerShown: false,
-  },
-  {
-    label: 'bottom_tab.announcements',
-    icon: ICONS.insertDriveFile,
-    name: Routes.ANNOUNCEMENT_MAIN,
-    component: AnnouncementStack,
     headerShown: false,
   },
   {

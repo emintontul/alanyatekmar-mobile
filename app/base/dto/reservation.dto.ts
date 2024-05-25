@@ -1,0 +1,29 @@
+export interface ReservationDto {
+    reservationCode: number;
+    adultCount: number;
+    childCount: number;
+    infantCount: number;
+    firstName: any;
+    lastName: any;
+    phoneNumber: any;
+    email: any;
+    hotelName: any;
+    roomNumber: any;
+    note: any;
+    reservationDate: string;
+    dayCount: number;
+    totalPrice: number;
+    currency: number;
+    name: any;
+    slug: any;
+    image: any;
+    rentACarId: string;
+    transferId: string;
+    tourDepartureLocationId: string;
+    tourDepartureLocation: any;
+    tourId: string;
+    hotelId: string;
+    type: number;
+    reservationStatus: number;
+    reservationPrices: any;
+}

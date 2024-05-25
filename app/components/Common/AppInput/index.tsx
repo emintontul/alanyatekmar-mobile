@@ -279,7 +279,7 @@ const AppInput: FC<AppInputProps> = props => {
                   maxLength={maxLength}
                   autoCapitalize={autoCapitalize}
                   autoComplete={autoComplete}
-                  keyboard={keyboard}
+                  keyboardType={keyboard}
                   textContentType={textContentType}
                   onSubmitEditing={() => {
                     skipNext && goToNextInput();

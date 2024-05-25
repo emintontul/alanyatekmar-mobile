@@ -7,6 +7,8 @@ interface ISettingsState {
   theme: 'light' | 'dark';
   appLoader: boolean;
   bottomTabDisplay: boolean;
+  connectedPrinter?: string;
+  pairedAddress?: string;
 }
 
 const initialState: ISettingsState = {
@@ -14,6 +16,8 @@ const initialState: ISettingsState = {
   theme: 'light',
   appLoader: false,
   bottomTabDisplay: true,
+  connectedPrinter: "",
+  pairedAddress: "",
 };
 
 const settingsSlice = createSlice({
@@ -33,10 +37,18 @@ const settingsSlice = createSlice({
     changeBottomTabDisplay: (state, action: {payload: boolean}) => {
       state.bottomTabDisplay = action.payload;
     },
+    // setConnectedPrinter is connected to the printer
+    setConnectedPrinter: (state, action: {payload: string}) => {
+      state.connectedPrinter = action.payload;
+    },
+    setPairedAddress: (state, action: {payload: string}) => {
+      state.pairedAddress = action.payload;
+    }
+
   },
 });
 
 const {actions, reducer} = settingsSlice;
-export const {changeLanguage, changeLoadingState, setTheme, changeBottomTabDisplay} = actions;
+export const {changeLanguage, changeLoadingState, setTheme, changeBottomTabDisplay, setConnectedPrinter} = actions;
 
 export default reducer;

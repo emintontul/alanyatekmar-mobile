@@ -1,6 +1,8 @@
 /* eslint-disable quotes */
 /* eslint-disable camelcase */
 
+import { start } from "repl";
+
 const tr = {
   lang: 'tr',
   user: {
@@ -12,6 +14,14 @@ const tr = {
   },
   common: {
     search: 'Arama',
+    reservationDate: 'Rezervasyon Tarihi',
+    reservationNumber: 'Rezervasyon Numarası',
+    reservationType: 'Rezervasyon Tipi',
+    reservationStatus: 'Rezervasyon Durumu',
+    reservationPrice: 'Rezervasyon Fiyatı',
+    reservationPaymentStatus: 'Rezervasyon Ödeme Durumu',
+    latestReservations: 'Son Rezervasyonlar',
+    seeAll: 'Tümünü Gör',
     today: 'Bugün',
     please_wait: 'Lütfen Bekleyin ...',
     supplier_financing: 'Tedarikçi Finansmanı',
@@ -27,6 +37,14 @@ const tr = {
     cancel: 'Vazgeç',
     notifications: 'Bildirimler',
     trainingPrograms: 'Antrenman Programları',
+    rentacarReservations: 'Araç Kiralama Rezervasyonları',
+    transferReservations: 'Transfer Rezervasyonları',
+    tourReservations: 'Tur Rezervasyonları',
+    hotelReservations: 'Otel Rezervasyonları',
+    addRentACarReservation: "Rent A Car Rez. Ekle",
+    addTransferReservation: "Transfer Rez. Ekle",
+    addTourReservation: "Tur Rez. Ekle",
+    addHotelReservation: "Otel Rez. Ekle",
     start: 'Başlat',
     latestPlan: 'Son Planı Aç',
     dont_show_this_again: 'Bunu bir daha gösterme',
@@ -145,6 +163,7 @@ const tr = {
     photos: 'Fotoğraflar',
     announcements: 'Duyurular',
     exercises: 'Programlar',
+    reservations: 'Rezervasyonlar',
     requests: 'Talepler',
     profile: 'Profil',
     exercise_detail: 'Egzersiz Detayı',
@@ -320,5 +339,11 @@ const tr = {
     abf_title: 'Alacak Bildirim Formu (ABF) Onayı',
     abf_subtitle: 'Teklifi kabul edebilmek için ABF’yi onaylayın.',
   },
+  page:{
+    add_tour_reservation: 'Tur Rezervasyonu Ekle',
+    add_transfer_reservation: 'Transfer Rezervasyonu Ekle',
+    add_hotel_reservation: 'Otel Rezervasyonu Ekle',
+    add_rentacar_reservation: 'Rent A Car Rezervasyonu Ekle',
+  }
 };
 export default tr;

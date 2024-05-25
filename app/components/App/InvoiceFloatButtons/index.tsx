@@ -77,12 +77,16 @@ const InvoiceFloatingButton = ({onClose, isVisible, setIsVisible}: InvoiceFloati
     });
     setIsVisible(false);
   };
+  const navigateToAddTourReservation = () => {
+    navigation.navigate('ADD_TOUR_RESERVATION');
+    setIsVisible(false);
+  };
   return (
     <Block flex>
       <Animated.View style={[styles.animatedView, animatedStyles]}>
         <Block pressable flex onPress={onClose} pb-0 style={styles.menuGradient}>
           <Block justify-end flex center>
-            <Block column pb-60 row>
+            <Block column pb-10 row>
               {plans.length > 0 && (
                 <Block onPress={navigateToLastExercise} center pressable mr-8 rounded-8 w-163 bg-white p-20 row justify-between>
                   <Text buttonTitle>common.latestPlan</Text>
@@ -96,12 +100,62 @@ const InvoiceFloatingButton = ({onClose, isVisible, setIsVisible}: InvoiceFloati
                 pressable
                 center
                 middle
-                w-163
-                p-20
+                p-12
+                w-173
+                mx-5
                 row
                 style={{alignItems: 'flex-start', alignItems: 'center', justifyContent: 'space-between'}}>
-                <Text buttonTitle>common.trainingPrograms</Text>
-                <AppIcon name={ICONS.RightArrow} size={24} color={colors.gray} />
+                <Text sectionTitleDark>common.addRentACarReservation</Text>
+                <AppIcon name={ICONS.RightArrow} size={18} color={colors.gray} />
+              </Block>
+
+              <Block
+                onPress={navigateToAddTourReservation}
+                bg-white
+                rounded-8
+                pressable
+                center
+                middle
+                p-12
+                w-173
+                mx-5
+                row
+                style={{alignItems: 'flex-start', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Text sectionTitleDark>common.addTourReservation</Text>
+                <AppIcon name={ICONS.RightArrow} size={18} color={colors.gray} />
+              </Block>
+              </Block>
+              <Block column pb-60 row>
+              <Block
+                onPress={navigateToExerciseList}
+                bg-white
+                rounded-8
+                pressable
+                center
+                middle
+                p-12
+                w-173
+                mx-5
+                row
+                style={{alignItems: 'flex-start', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Text sectionTitleDark>common.addTransferReservation</Text>
+                <AppIcon name={ICONS.RightArrow} size={18} color={colors.gray} />
+              </Block>
+
+              <Block
+                onPress={navigateToExerciseList}
+                bg-white
+                rounded-8
+                pressable
+                center
+                middle
+                p-12
+                w-173
+                mx-5
+                row
+                style={{alignItems: 'flex-start', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Text sectionTitleDark>common.addHotelReservation</Text>
+                <AppIcon name={ICONS.RightArrow} size={18} color={colors.gray} />
               </Block>
             </Block>
           </Block>

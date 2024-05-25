@@ -2,7 +2,7 @@ import {HomeStackNavigationProps} from './types';
 import routes from '../../Routes';
 import {IScreen} from '../Models/IScreen';
 
-import {ConnectPrinter, Documents, ExerciseDetail, HomePage, UpcomingPayments} from '@/screens';
+import {AddTourReservation, ConnectPrinter, Documents, ExerciseDetail, HomePage, UpcomingPayments} from '@/screens';
 import DashboardRequestDetail from '@/screens/DashboardRequestDetail';
 import NotificationList from '@/screens/NotificationList';
 
@@ -25,6 +25,12 @@ const Screens: Array<IScreen<HomeStackNavigationProps>> = [
     component: ConnectPrinter,
     headerShown: true,
   },
+  {
+    title: 'add_tour_reservation',
+    name: routes.ADD_TOUR_RESERVATION,
+    component: AddTourReservation,
+    headerShown: true,
+  }
 ];
 
 export default Screens;
