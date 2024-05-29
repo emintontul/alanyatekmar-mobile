@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Alert, useEffect, useState } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
@@ -7,18 +7,45 @@ import { useSelector } from 'react-redux';
 
 import { baseURL } from '@/api/config';
 import { AppIcon, AppImage, AppScreen, Block, Shadow, Text } from '@/components';
-import { RootState } from '@/store';
+import { RootState, settingsRedux } from '@/store';
 import { COLORS } from '@/theme';
 import { ICONS } from '@/utils';
 import { currency } from '@/config/utils';
 import DropShadow from 'react-native-drop-shadow';
-import { useAppSelector } from '@/hooks';
+import { useAppDispatch, useAppSelector } from '@/hooks';
 import { BluetoothManager } from 'tp-react-native-bluetooth-printer';
 import { useIsFocused } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const getAuthState = (state: RootState) => state.auth;
 const HomePage = () => {
   const navigation = useNavigation();
+
+
+  useEffect(() => {
+    const fetchConnectedPrinter = async () => {
+      const savedPrinter = await AsyncStorage.getItem('connectedPrinter');
+      console.log('%capp/screens/HomePage/index.tsx:28 savedPrinter', 'color: #007acc;', savedPrinter);
+      if (savedPrinter) {
+        const printer = JSON.parse(savedPrinter);
+        connectToDevice(printer.address);
+      }
+    };
+
+    fetchConnectedPrinter();
+  }, []);
+
+  const dispatch = useAppDispatch();
+  const connectToDevice = async (address) => {
+    try {
+      await BluetoothManager.connect(address);
+      dispatch(settingsRedux.setConnectedPrinter({ address }));
+      await AsyncStorage.setItem('connectedPrinter', JSON.stringify({ address }));
+      Alert.alert('Yazıcı bağlantısı başarılı.');
+    } catch (error) {
+      Alert.alert('Bağlantı hatası:', error.toString());
+    }
+  };
 
   const navigationOptions = {
     headerTitle: () => (

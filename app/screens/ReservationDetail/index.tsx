@@ -7,10 +7,7 @@ import { ReservationDto } from '@/base/dto/reservation.dto';
 import moment from 'moment';
 import { currency } from '@/config/utils';
 import LinearGradient from 'react-native-linear-gradient';
-import { login } from '@/store/reducers/auth';
 import { ALIGN, BluetoothEscposPrinter } from 'tp-react-native-bluetooth-printer';
-import { error } from 'console';
-import { hsdLogo } from '@/tekmarLogo';
 import { tekmarLogoBase } from '@/components/App/TekmarLogo';
 export const getAuthState = (state: RootState) => state.auth;
 const ReservationDetail = context => {
@@ -35,221 +32,188 @@ const ReservationDetail = context => {
     const getCurrency = (currency) => {
         switch (currency) {
             case 0:
-                return "₺";
+                return "TL";
             case 1:
-                return "$";
+                return "USD";
             case 2:
-                return "€";
+                return "EUR";
             case 3:
-                return "£";
+                return "GBP";
             default:
-                return "₺";
+                return "TL";
         }
     }
     // const printText = async (height = 1, width = 0) => {
 
     //     await BluetoothEscposPrinter.printText('Annem, sen dünyadaki en güzel çiçeksin\n\rSevgin, şefkatin hiç solmaz kalbimde.\n\rSeni çok seviyorum canım annem.\n\r', {
-    //       encoding: 'UTF-8',
-    //       codepage: 20,
-    //       widthtimes: 0,
-    //       heigthtimes: 0,
+    //       encoding: 'Cp857',
+    //       codepage: 13,
+    //       widthtimes: 1,
+    //       heigthtimes: 1,
     //       fonttype: 2,
     //     });
     //   };
 
     const printText = async (height = 1, width = 0) => {
-        try{
-        console.log('%cindex.tsx line:58 printer', 'color: #007acc;', "printer");
-        await BluetoothEscposPrinter.printerAlign(
-            ALIGN.CENTER,
-        );
+        try {
+            
+            await BluetoothEscposPrinter.printerAlign(
+                ALIGN.LEFT,
+            );
+            await BluetoothEscposPrinter.printPic(
+                tekmarLogoBase,
+                {
+                  width: 384,
+                  left: 60
+                },
+              );
 
-        await BluetoothEscposPrinter.printText(
-            'ALANYA TEKMAR\n\r',
-            {},
-        );
-        await BluetoothEscposPrinter.setBold(0);
+              await BluetoothEscposPrinter.printerAlign(
+                ALIGN.CENTER,
+            );
+            await BluetoothEscposPrinter.printText(
+                'MIT TURIZM TIC. INS. LTD. STI.\n\r', {}
+            );
 
-
-        await BluetoothEscposPrinter.printText(
-            'MIT TURIZM TIC. INS. LTD. STI.\n\r', {}
-        );
-        await BluetoothEscposPrinter.setBold(0);
-
-
-        await BluetoothEscposPrinter.printText(
-            'KIZLAR PINARI MAH. TORAMANLAR SOK. TOPRAK 4 APT, NO:12 B, Alanya/Antalya\n\r',
-            {},
-        );
-        await BluetoothEscposPrinter.setBold(0);
-
-        await BluetoothEscposPrinter.printText('0536 574 49 10.\n\r', {
-        });
-
-        await BluetoothEscposPrinter.setBold(0);
-
-        await BluetoothEscposPrinter.printText('0242 512 49 10.\n\r', {
-        });
-
-        await BluetoothEscposPrinter.printText(
-            '\n\r',
-            {
-                encoding: 'UTF-8',
-                codepage: 20,
-                widthtimes: 0,
-                heigthtimes: 0,
-                fonttype: 1,
-            },
-        );
-        await BluetoothEscposPrinter.printerAlign(
-            ALIGN.LEFT,
-        );
-
-        await BluetoothEscposPrinter.printText('Rezervasyon Kodu: ' + reservation?.reservationCode + '.\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText("--------------------------------\n\r",{});
-        // Rezervasyon Tarihi
-        await BluetoothEscposPrinter.printText('Tur Tarihi: ' + moment(reservation?.reservationDate).format("LL") + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        // Oluşturan
-        await BluetoothEscposPrinter.printText('Ad Soyad: ' + reservation?.firstName + ' ' + reservation?.lastName + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        // E-Posta
-        await BluetoothEscposPrinter.printText('E-Posta: ' + reservation?.email + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        // Telefon Numarası
-        await BluetoothEscposPrinter.printText('Telefon Numarası: ' + reservation?.phoneNumber + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-        await BluetoothEscposPrinter.printText('Otel Adı: ' + reservation?.hotelName + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('Oda Numarası: ' + reservation?.roomNumber + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-        reservation?.tourDepartureLocation &&
-
-        await BluetoothEscposPrinter.printText('Tur Kalkış Noktası: ' + reservation?.tourDepartureLocation + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('Yetişkin Sayısı: ' + reservation?.adultCount + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('Çocuk Sayısı: ' + reservation?.childCount + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        if (reservation?.infantCount) {
-            await BluetoothEscposPrinter.printText('Bebek Sayısı: ' + reservation?.infantCount + '\n\r', {
-                encoding: 'UTF-8',
-                codepage: 20,
-                widthtimes: 0,
-                heigthtimes: 0,
-                fonttype: 1,
+            await BluetoothEscposPrinter.printText(
+                'KIZLAR PINARI MAH. TORAMANLAR SOK. TOPRAK 4 APT, NO:12 B, Alanya/Antalya\n\r',
+                {},
+            );
+            await BluetoothEscposPrinter.printText('0536 574 49 10.\n\r', {
             });
+
+            await BluetoothEscposPrinter.printText('0242 512 49 10.\n\r', {
+            });
+
+            await BluetoothEscposPrinter.printText(
+                '\n\r',
+                {
+                },
+            );
+            await BluetoothEscposPrinter.printerAlign(
+                ALIGN.LEFT
+            );
+
+            await BluetoothEscposPrinter.printText("------------------------------------------------\n\r", {});
+            await BluetoothEscposPrinter.printText('Rezervasyon Kodu: ' + reservation?.reservationCode + '\n\r', {encoding: 'cp857',
+            codepage: 25,
+            });
+
+            await BluetoothEscposPrinter.printText('Tur Tarihi: ' + moment(reservation?.reservationDate).format("LL") + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            // Oluşturan
+            await BluetoothEscposPrinter.printText('Ad Soyad: ' + reservation?.firstName + ' ' + reservation?.lastName + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            });
+
+            // E-Posta
+            await BluetoothEscposPrinter.printText('E-Posta: ' + reservation?.email + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            // Telefon Numarası
+            await BluetoothEscposPrinter.printText('Telefon Numarası: ' + reservation?.phoneNumber + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+            await BluetoothEscposPrinter.printText('Otel Adı: ' + reservation?.hotelName + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            await BluetoothEscposPrinter.printText('Oda Numarası: ' + reservation?.roomNumber + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+            reservation?.tourDepartureLocation &&
+
+                await BluetoothEscposPrinter.printText('Tur Kalkis Noktası: ' + reservation?.tourDepartureLocation + '\n\r', {
+                    encoding: 'UTF-8',
+                    codepage: 20,
+                    widthtimes: 0,
+                    heigthtimes: 0,
+                    fonttype: 1,
+                });
+
+            await BluetoothEscposPrinter.printText('Yetiskin Sayisı: ' + reservation?.adultCount + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            await BluetoothEscposPrinter.printText('Cocuk Sayisı: ' + reservation?.childCount + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            if (reservation?.infantCount) {
+                await BluetoothEscposPrinter.printText('Bebek Sayisı: ' + reservation?.infantCount + '\n\r', {
+                    encoding: 'UTF-8',
+                    codepage: 20,
+                });
+            }
+
+            await BluetoothEscposPrinter.printText('\n------------------------------------------------\n', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            await BluetoothEscposPrinter.printText('Toplam Tutar: ' + getCurrency(reservation?.currency) + reservation?.totalPrice + '\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            await BluetoothEscposPrinter.printText('------------------------------------------------\n\r', {encoding: 'UTF-8',
+            codepage: 20,
+        
+            
+            });
+            await BluetoothEscposPrinter.printText('VAKIFLAR BANKASI:\n\r', {
+                encoding: 'UTF-8',
+                codepage: 20,
+            
+            });
+
+            await BluetoothEscposPrinter.printText('TR87 0001 5001 5800 7307 3089 79\n\r', {encoding: 'UTF-8',
+            codepage: 20,
+        
+            
+            });
+
+            await BluetoothEscposPrinter.printText('\n\r', {encoding: 'UTF-8',
+            codepage: 20,
+        
+            
+            });
+
+            await BluetoothEscposPrinter.printText('\n\r', {
+            
+            });
+
+            await BluetoothEscposPrinter.printText('\n\r', {
+            
+            });
+
+            await BluetoothEscposPrinter.printText('\n\r', {
+            
+            });
+        } catch (error) {
+            console.log('%capp/screens/ReservationDetail/index.tsx:212 error', 'color: #007acc;', error);
+            alert(error.message || 'ERROR');
         }
-
-        await BluetoothEscposPrinter.printText('\n--------------------------------\n', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('Toplam Tutar: ' + getCurrency(reservation?.currency) + reservation?.totalPrice + '\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-
-        await BluetoothEscposPrinter.printText('\n\r', {
-            encoding: 'UTF-8',
-            codepage: 20,
-            widthtimes: 0,
-            heigthtimes: 0,
-            fonttype: 1,
-        });
-    } catch (error) {
-        alert(error.message || 'ERROR');
-    }
 
 
     };
@@ -293,22 +257,22 @@ const ReservationDetail = context => {
                                         {moment(reservation?.reservationDate).format("LL")}
                                     </Text>
                                 </Block>
-                                <Block py-10 borderBottom={"1px solid #f9f9f9"} row spaceBetween>
+                                {reservation?.checkIn && <Block py-10 borderBottom={"1px solid #f9f9f9"} row spaceBetween>
                                     <Text color="primary">
                                         Giriş Tarihi:  {" "}
                                     </Text>
                                     <Text bold color="primary">
                                         {moment(reservation?.checkIn).format("LL")}
                                     </Text>
-                                </Block>
-                                <Block py-10 borderBottom={"1px solid #f9f9f9"} row spaceBetween>
+                                </Block>}
+                                {reservation?.checkOut && <Block py-10 borderBottom={"1px solid #f9f9f9"} row spaceBetween>
                                     <Text color="primary">
                                         Çıkış Tarihi:  {" "}
                                     </Text>
                                     <Text bold color="primary">
                                         {moment(reservation?.checkOut).format("LL")}
                                     </Text>
-                                </Block>
+                                </Block>}
                                 <Block py-10 borderBottom={"1px solid #f9f9f9"} row spaceBetween>
                                     <Text color="primary">
                                         Oluşturan:  {" "}
